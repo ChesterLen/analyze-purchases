@@ -1,8 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv('../sales_data.csv')
-
-df = pd.DataFrame(data)
+df = pd.read_csv('../sales_data.csv')
 
 df_isnull = df.isnull().any().any()
 
