@@ -2,6 +2,8 @@ import pandas as pd
 
 df = pd.read_csv('../sales_data.csv')
 
+df['Transaction Date'] = pd.to_datetime(df['Transaction Date'])
+
 df_isnull = df.isnull().any().any()
 
 if df_isnull:
